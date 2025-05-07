@@ -90,6 +90,23 @@ class FormBuilder {
   }
 }
 
+class FormDirector {
+  constructor(FormBuilder) {
+    this.setBuilder(FormBuilder);
+  }
+
+  setBuilder(formBuilder) {
+    this.formBuilder = formBuilder;
+  }
+
+  createPeopleForm() {
+    this.formBuilder.reset();
+    this.formBuilder
+      .setText('firstName', 'Nombre')
+      .setText('lastName', 'Apellidos');
+  }
+}
+
 const frmBuilder = new FormBuilder();
 
 const formPeople = frmBuilder
@@ -112,3 +129,7 @@ console.log(formMail);
 
 form1.innerHTML = formPeople.getContent();
 form2.innerHTML = formMail.getContent();
+
+const director = new FormDirector(frmBuilder);
+director.createPeopleForm();
+form3.innerHTML = frmBuilder.build().getContent();
