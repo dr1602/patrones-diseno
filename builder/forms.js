@@ -3,6 +3,8 @@ class Form {
     this.controls = controls;
     this.action = action;
   }
+
+  getContent() {}
 }
 
 class FormBuilder {
@@ -32,8 +34,16 @@ class FormBuilder {
   build() {
     const frm = new Form(this.controls, this.action);
     this.reset();
-    return;
+    return frm;
   }
 }
 
+const frmBuilder = new FormBuilder();
 
+const formPeople = frmBuilder
+  .setAction('add.php')
+  .setText('firstName', 'Nombre')
+  .setText('lastName', 'Apellidos')
+  .build();
+
+console.log(formPeople);
