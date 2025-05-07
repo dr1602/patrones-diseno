@@ -102,4 +102,13 @@ const formPeople = frmBuilder
 
 console.log(formPeople);
 
+const formMail = frmBuilder
+  .setAction('send.php')
+  .setText('name', 'Nombre')
+  .setColor('email', 'Correo electrónico')
+  .build();
+
+console.log(formMail);
+
 form1.innerHTML = formPeople.getContent();
+form2.innerHTML = formMail.getContent();
