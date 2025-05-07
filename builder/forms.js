@@ -26,7 +26,7 @@ class Form {
     return `<input 
         type='${control.type}' 
         id='${control.name}' 
-        name='${control.name}'>  
+        name='${control.name}' 
     />`;
   }
 }
@@ -71,3 +71,5 @@ const formPeople = frmBuilder
   .build();
 
 console.log(formPeople);
+
+form1.innerHTML = formPeople.getContent();
