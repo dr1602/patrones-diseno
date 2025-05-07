@@ -105,6 +105,14 @@ class FormDirector {
       .setText('firstName', 'Nombre')
       .setText('lastName', 'Apellidos');
   }
+
+  createContactForm() {
+    this.formBuilder.reset();
+    this.formBuilder
+      .setText('name', 'Nombre de la interesada')
+      .setEmail('email', 'Correo electrónico')
+      .setText('message', 'Mensaje');
+  }
 }
 
 const frmBuilder = new FormBuilder();
@@ -133,3 +141,9 @@ form2.innerHTML = formMail.getContent();
 const director = new FormDirector(frmBuilder);
 director.createPeopleForm();
 form3.innerHTML = frmBuilder.build().getContent();
+
+director.createPeopleForm();
+form4.innerHTML = frmBuilder.build().getContent();
+
+director.createContactForm();
+form5.innerHTML = frmBuilder.build().getContent();
