@@ -15,6 +15,7 @@ class Form {
             </div>`
           );
         }, '')}
+        <button type='submit'>Enviar</button>
     </form>`;
   }
 
@@ -55,6 +56,33 @@ class FormBuilder {
     return this;
   }
 
+  setEmail(name, text) {
+    this.controls.push({
+      name: name,
+      text: text,
+      type: 'email',
+    });
+    return this;
+  }
+
+  setCheckbox(name, text) {
+    this.controls.push({
+      name: name,
+      text: text,
+      type: 'checkbox',
+    });
+    return this;
+  }
+
+  setColor(name, text) {
+    this.controls.push({
+      name: name,
+      text: text,
+      type: 'color',
+    });
+    return this;
+  }
+
   build() {
     const frm = new Form(this.controls, this.action);
     this.reset();
@@ -68,6 +96,8 @@ const formPeople = frmBuilder
   .setAction('add.php')
   .setText('firstName', 'Nombre')
   .setText('lastName', 'Apellidos')
+  .setCheckbox('drinker', 'Es bebedor?')
+  .setColor('favouriteColour', 'Color favorito')
   .build();
 
 console.log(formPeople);
