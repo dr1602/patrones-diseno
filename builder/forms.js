@@ -4,7 +4,31 @@ class Form {
     this.action = action;
   }
 
-  getContent() {}
+  getContent() {
+    return `<form method='post' action='${this.action}'> 
+        ${this.controls.reduce((ac, c) => {
+          return (
+            ac +
+            `<div> 
+                ${this.getLabel(c)}
+                ${this.getInput(c)}
+            </div>`
+          );
+        }, '')}
+    </form>`;
+  }
+
+  getLabel(control) {
+    return `<label>${control.text}</label>`;
+  }
+
+  getInput(control) {
+    return `<input 
+        type='${control.type}' 
+        id='${control.name}' 
+        name='${control.name}'>  
+    />`;
+  }
 }
 
 class FormBuilder {
