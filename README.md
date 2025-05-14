@@ -37,3 +37,24 @@ npx husky init
 ```sh
 echo 'npx --no -- commitlint --edit "$1"' > .husky/commit-msgs
 ```
+
+**Fix en caso de error**
+
+1. Eliminar el hook pre-commit no deseado
+
+```sh
+rm -f .husky/pre-commit
+```
+
+2. Verificar que solo exista el hook de commit-msg
+
+```sh
+ls -la .husky/
+```
+
+Deberías ver solo:
+
+```sh
+commit-msg
+_/
+```
