@@ -209,3 +209,22 @@ npx conventional-changelog -p angular -i CHANGELOG.md -s -r 0 \
 git add CHANGELOG.md
 
 ```
+
+dando la vuelta
+
+```sh
+npx conventional-changelog -p angular -i CHANGELOG.md -s -r 0 --config .changelogrc.json --types "feat,fix,refactor,chore,docs"
+```
+
+```sh
+#!/bin/sh
+npx conventional-changelog -p angular -i CHANGELOG.md -s -r 1 --config .changelogrc.json --types "feat,fix,refactor,chore,docs"
+```
+
+```sh
+git tag -d $(git tag -l)
+```
+
+```sh
+git tag v1.0.0
+```
