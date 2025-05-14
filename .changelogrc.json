@@ -1,4 +1,5 @@
 {
+  "header": "# Changelog\n\nHistorial completo de cambios",
   "types": [
     { "type": "feat", "section": "✨ Features" },
     { "type": "fix", "section": "🐛 Bug Fixes" },
@@ -6,5 +7,7 @@
     { "type": "docs", "section": "📚 Documentation", "hidden": false },
     { "type": "chore", "section": "🔧 Maintenance", "hidden": false }
   ],
-  "commitUrlFormat": "https://github.com/dr1602/patrones-diseno/commit/{{hash}}"
+  "commitGroupsSort": "title",
+  "commitsSort": ["scope", "subject"],
+  "noteGroupsSort": "title"
 }
