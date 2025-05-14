@@ -196,3 +196,16 @@ Luego genera el CHANGELOG con:
 npx conventional-changelog -p angular -i CHANGELOG.md -s --config .changelogrc.json
 
 ```
+
+# Comando todo en uno para debugger:
+
+Bonus: Comando todo-en-uno para resetear:
+
+```sh
+
+rm CHANGELOG.md && \
+npx conventional-changelog -p angular -i CHANGELOG.md -s -r 0 \
+--config .changelogrc.json --types "feat,fix,refactor,chore,docs" && \
+git add CHANGELOG.md
+
+```
