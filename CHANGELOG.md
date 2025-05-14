@@ -21,5 +21,3 @@
 * estructura inicial para ejercicio de práctica de builders ([593a92f](https://github.com/dr1602/patrones-diseno/commit/593a92ff50b7ef7d731cabd603d89eef2399b35b))
 * se agrega primer renderizacion en el doom ([7167097](https://github.com/dr1602/patrones-diseno/commit/716709726fd97d776a963009f486e3a346bbe022))
 
-
-

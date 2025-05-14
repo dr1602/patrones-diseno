@@ -83,4 +83,10 @@ _-i CHANGELOG.md:_ Archivo de salida.
 
 _-s:_ Sobrescribe el archivo existente.
 
-test
+## Fix para que se actualice el log
+
+```sh
+
+conventional-changelog -p angular -i CHANGELOG.md -s -r 0
+
+```
