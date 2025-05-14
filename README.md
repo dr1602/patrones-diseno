@@ -121,3 +121,20 @@ Así el CHANGELOG se actualizará automáticamente tras cada commit.
 chmod +x .husky/post-commit
 
 ```
+
+## Corrección
+
+```sh
+
+echo '#!/bin/sh
+npx conventional-changelog -p angular -i CHANGELOG.md -s' > .husky/post-commit
+
+```
+
+Ahora sí, lo hacemos ejecutable:
+
+```sh
+
+chmod +x .husky/post-commit
+
+```
