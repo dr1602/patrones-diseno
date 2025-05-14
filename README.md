@@ -138,3 +138,11 @@ Ahora sí, lo hacemos ejecutable:
 chmod +x .husky/post-commit
 
 ```
+
+## Corrección para que no se duplique el log
+
+```sh
+
+npx conventional-changelog -p angular -i CHANGELOG.md -s -r 1
+
+```
