@@ -1,2 +1,4 @@
 #!/bin/sh
-npx conventional-changelog -p angular -i CHANGELOG.md -s
+npx conventional-changelog -p angular -i CHANGELOG.md -s -r 1 \
+  --config .changelogrc.json \
+  --types "feat,fix,refactor,docs"

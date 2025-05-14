@@ -1,9 +1,10 @@
 {
   "types": [
-    { "type": "feat", "section": "Features" },
-    { "type": "fix", "section": "Bug Fixes" },
-    { "type": "refactor", "section": "Refactors" },
-    { "type": "chore", "section": "Maintenance" },
-    { "type": "docs", "section": "Documentation" }
-  ]
+    { "type": "feat", "section": "✨ Features" },
+    { "type": "fix", "section": "🐛 Bug Fixes" },
+    { "type": "refactor", "section": "♻️ Refactors", "hidden": false },
+    { "type": "docs", "section": "📚 Documentation", "hidden": false },
+    { "type": "chore", "section": "🔧 Maintenance", "hidden": false }
+  ],
+  "commitUrlFormat": "https://github.com/dr1602/patrones-diseno/commit/{{hash}}"
 }
