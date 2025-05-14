@@ -6,6 +6,10 @@
 
 
 
+# [](https://github.com/dr1602/patrones-diseno/compare/v1.0.0...v) (2025-05-14)
+
+
+
 # [1.0.0](https://github.com/dr1602/patrones-diseno/compare/593a92ff50b7ef7d731cabd603d89eef2399b35b...v1.0.0) (2025-05-14)
 
 
