@@ -59,4 +59,26 @@ commit-msg
 _/
 ```
 
-test
+# CHANGELOG automático
+
+## Usando conventional-changelog (recomendado)
+
+```sh
+
+npm install -g conventional-changelog-cli
+
+```
+
+## Genera tu CHANGELOG.md (en la raíz del proyecto):
+
+```sh
+
+conventional-changelog -p angular -i CHANGELOG.md -s
+
+```
+
+_-p angular:_ Usa el preset de Angular (soporta feat, fix, breaking changes, etc.).
+
+_-i CHANGELOG.md:_ Archivo de salida.
+
+_-s:_ Sobrescribe el archivo existente.
