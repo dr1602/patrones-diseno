@@ -146,3 +146,11 @@ chmod +x .husky/post-commit
 npx conventional-changelog -p angular -i CHANGELOG.md -s -r 1
 
 ```
+
+agrega nuevo comando para evitar dobles registros
+
+```sh
+
+npx conventional-changelog -p angular -i CHANGELOG.md -s --output-unreleased=true
+
+```
