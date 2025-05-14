@@ -91,4 +91,12 @@ conventional-changelog -p angular -i CHANGELOG.md -s -r 0
 
 ```
 
-nuevo test
+## Agrega comando para actualizar log
+
+El siguiente comando actualiza el log:
+
+```sh
+
+conventional-changelog -p angular -i CHANGELOG.md -s -r 0
+
+```
