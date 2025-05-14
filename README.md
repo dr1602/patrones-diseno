@@ -100,3 +100,24 @@ El siguiente comando actualiza el log:
 conventional-changelog -p angular -i CHANGELOG.md -s -r 0
 
 ```
+
+# Actualización automática del log
+
+1. Añade un hook post-commit (en .husky/post-commit):
+
+```sh
+
+#!/bin/sh
+npx conventional-changelog -p angular -i CHANGELOG.md -s
+
+```
+
+Así el CHANGELOG se actualizará automáticamente tras cada commit.
+
+2. Hazlo ejecutable:
+
+```sh
+
+chmod +x .husky/post-commit
+
+```
