@@ -154,3 +154,5 @@ agrega nuevo comando para evitar dobles registros
 npx conventional-changelog -p angular -i CHANGELOG.md -s --output-unreleased=true
 
 ```
+
+esto vive en un archivo post commits
