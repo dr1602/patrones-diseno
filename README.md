@@ -156,3 +156,43 @@ npx conventional-changelog -p angular -i CHANGELOG.md -s --output-unreleased=tru
 ```
 
 esto vive en un archivo post commits
+
+# Agrega los otros tipos de commits
+
+Crea un archivo .changelogrc.json en la raíz de tu proyecto:
+
+```json
+{
+  "types": [
+    { "type": "feat", "section": "Features" },
+    { "type": "fix", "section": "Bug Fixes" },
+    { "type": "refactor", "section": "Refactors", "hidden": false },
+    { "type": "chore", "section": "Maintenance", "hidden": false },
+    { "type": "docs", "section": "Documentation", "hidden": false }
+  ]
+}
+```
+
+Para incluir todos los tipos de commits sin filtrar:
+
+```sh
+
+npx conventional-changelog -p angular -i CHANGELOG.md -s --types "feat,fix,refactor,chore,docs,style,test,perf"
+
+```
+
+Borrar change log
+
+```sh
+
+rm CHANGELOG.md
+
+```
+
+Luego genera el CHANGELOG con:
+
+```sh
+
+npx conventional-changelog -p angular -i CHANGELOG.md -s --config .changelogrc.json
+
+```
