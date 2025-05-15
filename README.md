@@ -35,7 +35,9 @@ npx husky init
 3. Crea un hook para validar los mensajes de commit:
 
 ```sh
-echo 'npx --no -- commitlint --edit "$1"' > .husky/commit-msgs
+echo '#!/bin/sh
+npx --no -- commitlint --edit "$1"' > .husky/commit-msg
+chmod +x .husky/commit-msg
 ```
 
 **Fix en caso de error**
